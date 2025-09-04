@@ -6,7 +6,7 @@
   <title>Landing Page на Debian с NGINX и Node.js — современный и быстрый сайт с SEO оптимизацией</title>
   <meta name="description" content="Узнайте, почему лучший инструмент рекламы — это Landing Page на Debian с NGINX и Node.js. Современные технологии, высокая скорость и SEO оптимизация.">
   <meta name="keywords" content="Landing Page на Debian, быстрый сайт на Node.js, SEO оптимизация лендинга, реклама бизнеса, NGINX сервер">
-
+    <link rel="stylesheet" href="public/style.css">
   <!-- JSON-LD Structured Data -->
   <script type="application/ld+json">
   {
@@ -23,7 +23,7 @@
       "name": "WebDev Studio",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://debian-nginx-nodejs.qucu.ru/logo.png"
+        "url": "https://debian-nginx-nodejs.qucu.ru/public/img/ico.svg"
       }
     },
     "mainEntityOfPage": {
@@ -34,6 +34,7 @@
     "dateModified": "2025-09-04 10:53:00 (UTC+7)"
   }
   </script>
+  <link rel="icon" type="image/x-icon" href="public/img/ico.svg">
 </head>
 <body>
   <header>
@@ -41,6 +42,88 @@
   </header>
 
   <main>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="logo">Web Workshop</div>
+    <nav class="nav">
+      <a href="#about">О нас</a>
+      <a href="#services">Услуги</a>
+      <a href="#pricing">Цены</a>
+      <a href="#contacts">Контакты</a>
+    </nav>
+    <button class="btn-header">Войти</button>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Создаём будущее <span>вместе</span></h1>
+      <p>Профессиональные решения для вашего бизнеса и идей.</p>
+      <div class="hero-buttons">
+        <a href="#services" class="btn">Заказать</a>
+        <a href="#about" class="btn-outline">Подробнее</a>
+      </div>
+    </div>
+    <picture class="hero-image">
+        <source srcset="public/img/DSC_8733.avif" type="image/avif">
+
+        <img src="public/img/DSC_8733.JPG" alt="Герой лендинга">
+    </picture>
+  </section>
+
+  <!-- Services -->
+  <section id="services" class="services">
+    <h2>Наши услуги</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Веб-разработка</h3>
+        <p>Создание адаптивных сайтов и приложений.</p>
+      </div>
+      <div class="card">
+        <h3>Маркетинг</h3>
+        <p>Комплексные стратегии продвижения.</p>
+      </div>
+      <div class="card">
+        <h3>Брендинг</h3>
+        <p>Разработка фирменного стиля и айдентики.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing -->
+  <section id="pricing" class="pricing">
+    <h2>Тарифы</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Старт</h3>
+        <p>Для малого бизнеса</p>
+        <span class="price">990 ₽</span>
+        <a href="https://wa.me/+79528885656?text=I'm need langing page with cost from 990 ₽" class="btn">Выбрать</a>
+      </div>
+      <div class="card">
+        <h3>Бизнес</h3>
+        <p>Оптимальный пакет</p>
+        <span class="price">4 990 ₽</span>
+        <a href="https://wa.me/+79528885656?text=I'm need langing page with cost from 4 990 ₽" class="btn">Выбрать</a>
+      </div>
+      <div class="card">
+        <h3>Премиум</h3>
+        <p>Максимум возможностей</p>
+        <span class="price">9 990 ₽</span>
+        <a href="https://wa.me/+79528885656?text=I'm need langing page with cost from 9 990 ₽" class="btn">Выбрать</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contacts -->
+  <section id="contacts" class="contacts">
+    <h2>Контакты</h2>
+    <p>Email: <a href="mailto:chikchicly@gmail.com">chikchicly@gmail.com</a></p>
+    <p>Телефон: <a href="tell:+79528885656">+7 (952) 888-56-56</a></p>
+  </section>
+
+
     <article>
       <section>
         <h2>Почему Landing Page — это лучшая реклама?</h2>
@@ -70,7 +153,13 @@
   </main>
 
   <footer>
-    <p>&copy; 2025 WebDev Studio — Разработка сайтов и Landing Page</p>
+    <p>&copy; 2025 Web Workshop Studio — Разработка сайтов и Landing Page</p>
   </footer>
+    <!-- Footer -->
+  <footer class="footer">
+    <p>© 2025 Все права защищены.</p>
+  </footer>
+
+  <script src="site/js/script.js"></script>
 </body>
 </html>

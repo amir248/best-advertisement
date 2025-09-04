@@ -1,0 +1,205 @@
+/* Fonts & Colors */
+:root {
+  --black: #0a0a0a;
+  --yellow: #ffd500;
+  --green: #00b050;
+  --white: #fff;
+  --gray: #ccc;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  background: var(--black);
+  color: var(--white);
+  line-height: 1.6;
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  background: var(--black);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--yellow);
+}
+
+.nav a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: var(--white);
+  transition: color 0.3s;
+}
+
+.nav a:hover {
+  color: var(--green);
+}
+
+.btn-header {
+  padding: 10px 20px;
+  border: none;
+  background: var(--green);
+  color: var(--white);
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* Hero */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 60px 50px;
+}
+
+.hero-content {
+  max-width: 50%;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.hero h1 span {
+  color: var(--yellow);
+}
+
+.hero p {
+  margin-bottom: 20px;
+}
+
+.hero-buttons .btn,
+.hero-buttons .btn-outline {
+  margin-right: 15px;
+}
+
+.hero-image img {
+  max-width: 400px;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.7);
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 12px 25px;
+  background: var(--yellow);
+  color: var(--black);
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: var(--green);
+  color: var(--white);
+}
+
+.btn-outline {
+  display: inline-block;
+  padding: 12px 25px;
+  border: 2px solid var(--yellow);
+  color: var(--yellow);
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn-outline:hover {
+  background: var(--yellow);
+  color: var(--black);
+}
+
+/* Sections */
+section {
+  padding: 60px 50px;
+  text-align: center;
+}
+article > section{
+  text-align: left;
+}
+h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: var(--yellow);
+}
+
+/* Cards */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+.card {
+  background: #111;
+  padding: 25px;
+  border-radius: 12px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 15px rgba(255, 213, 0, 0.4);
+}
+
+.card .price {
+  display: block;
+  margin: 15px 0;
+  font-size: 1.5rem;
+  color: var(--green);
+}
+
+/* Footer */
+.footer {
+  background: #111;
+  text-align: center;
+  padding: 20px;
+  color: var(--gray);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+  .hero-content {
+    max-width: 100%;
+  }
+  .hero-image img {
+    margin-top: 20px;
+    max-width: 90%;
+  }
+}
+
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 0.8s forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
