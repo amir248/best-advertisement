@@ -21,10 +21,15 @@ function date(){
 }
 
 function onclick(){
-  document.querySelector(".btn-header").addEventListener("click",()=>{
+  if(window.location.path=="/"){
+    document.querySelector(".btn-header").addEventListener("click",()=>{
     window.location.href="https://wa.me/+79528885656?text=hi! I need landing page!"
-  })
-}
+  });
+  }else{
+    console.log('else onclick');
+  }
+  
+};//onclick()
 function openMenu(){
   if(window.innerWidth<=700){
     const listA=['<a href="/">Main</a>','<a href="/about">О нас</a>','<a href="#services">Услуги</a>','<a href="#pricing">Цены</a>','<a href="#contacts">Контакты</a>'];
@@ -36,13 +41,13 @@ function openMenu(){
     setTimeout(()=>{
       document.querySelector(".menu").style.height="100vh";
       document.querySelector(".menu").style.opacity="1";
-      for(let c=0;c<=listA.length;c++){
+      for(let c=0;c<listA.length;c++){
         document.querySelectorAll(".menu > a")[c].style.fontSize="30px";
         document.querySelectorAll(".menu > a")[c].style.opacity="1";
       };
     },1)
     document.querySelector(".menu").addEventListener("click",()=>{
-      for(let c=0;c<=listA.length;c++){
+      for(let c=0;c<listA.length;c++){
         document.querySelector(".menu").style.opacity="0";
         document.querySelectorAll(".menu > a")[c].style.opacity="0";
         document.querySelectorAll(".menu > a")[c].style.fontSize="0px";
