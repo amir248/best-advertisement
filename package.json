@@ -1,0 +1,28 @@
+{
+  "name": "best-advertisement",
+  "version": "1.0.0",
+  "description": "site with Debian server NGINX sight node.js on vanila JS and SEO optimization with promotion ADS",
+  "main": "best.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amir248/best-advertisement.git"
+  },
+  "keywords": [
+    "best",
+    "tehnologis"
+  ],
+  "author": "Amir",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/amir248/best-advertisement/issues"
+  },
+  "homepage": "https://github.com/amir248/best-advertisement#readme",
+  "dependencies": {
+    "express": "^5.1.0",
+    "fs": "^0.0.1-security",
+    "path": "^0.12.7"
+  }
+}

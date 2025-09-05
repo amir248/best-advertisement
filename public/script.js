@@ -23,7 +23,17 @@ function onclick(){
     window.location.href="https://wa.me/+79528885656?text=hi! I need landing page!"
   })
 }
+function openMenu(){
+  function createMenu(){
+    console.log('oK');
+    const list=document.createElement("div");
+    list.classList.add('menu');
+    document.querySelector("main").prepend(list);
+  }
+  document.getElementsByClassName("nav").addEventListener("click", createMenu);
+}
 async function main(){
+  await openMenu();
   await date();
   await onclick();
 }
