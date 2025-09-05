@@ -1,0 +1,98 @@
+/* Общие стили для всего сайта */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Arial", sans-serif;
+    background-color: #f4f7f9;
+    color: #333;
+    line-height: 1.6;
+    background-color: #333;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #0056b3;
+}
+
+header, footer {
+    background-color: #1f3727;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header h1, footer p {
+    margin: 0;
+}
+
+nav a {
+    margin: 0 15px;
+    font-weight: bold;
+}
+
+main {
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+article{
+    color:white;
+    text-shadow: 1px 1px black;
+}
+h1, h2, h3 {
+    color: #111827;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+/* Кнопки */
+button, .btn {
+    padding: 10px 20px;
+    background-color: #2563eb;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover, .btn:hover {
+    background-color: #1e40af;
+}
+
+/* Карточки / блоки */
+.card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    h1 { font-size: 2rem; }
+    h2 { font-size: 1.5rem; }
+    main { padding: 0 15px; }
+}
