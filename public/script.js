@@ -7,6 +7,8 @@ document.addEventListener("DOMContentLoaded", () => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         entry.target.classList.add("fade-in");
+      }else{
+        entry.target.classList.remove("fade-in");
       }
     });
   }, options);
@@ -24,13 +26,34 @@ function onclick(){
   })
 }
 function openMenu(){
+  const listA=['<a href="/">Main</a>','<a href="/about">О нас</a>','<a href="#services">Услуги</a>','<a href="#pricing">Цены</a>','<a href="#contacts">Контакты</a>'];
   function createMenu(){
     console.log('oK');
     const list=document.createElement("div");
     list.classList.add('menu');
-    document.querySelector("main").prepend(list);
+    list.innerHTML=`${listA}`;
+    document.querySelector("body").prepend(list);
+    setTimeout(()=>{
+      document.querySelector(".menu").style.height="100vh";
+      document.querySelector(".menu").style.opacity="1";
+      for(let c=0;c<=listA.length;c++){
+        document.querySelectorAll(".menu > a")[c].style.fontSize="30px";
+        document.querySelectorAll(".menu > a")[c].style.opacity="1";
+      };
+    },1)
+    document.querySelector(".menu").addEventListener("click",()=>{
+      for(let c=0;c<=listA.length;c++){
+        document.querySelector(".menu").style.opacity="0";
+        document.querySelectorAll(".menu > a")[c].style.opacity="0";
+        document.querySelectorAll(".menu > a")[c].style.fontSize="0px";
+        document.querySelector(".menu").style.top="100%";
+      };
+      setTimeout(()=>{
+        document.querySelector(".menu").remove();
+      },777);
+    });
   }
-  document.getElementsByClassName("nav").addEventListener("click", createMenu);
+  document.querySelector(".nav").addEventListener("click", createMenu);
 }
 async function main(){
   await openMenu();
