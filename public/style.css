@@ -50,7 +50,6 @@ body {
   color: var(--white);
   /* transition: color 0.3s; */
   transition: all 3s ease-out;
-
 }
 
 .nav a:hover {
@@ -64,6 +63,7 @@ body {
   color: var(--white);
   border-radius: 6px;
   cursor: pointer;
+  text-decoration:none;
 }
 .btn-header:hover{
   color:black;
