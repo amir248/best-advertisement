@@ -32,7 +32,7 @@ function onclick(){
 };//onclick()
 function openMenu(){
   if(window.innerWidth<=700){
-    const listA=['<a href="/">Main</a>','<a href="/about">О нас</a>','<a href="#services">Услуги</a>','<a href="#pricing">Цены</a>','<a href="#contacts">Контакты</a>'];
+    const listA=['<a href="/">Main</a>','<a href="/about">О нас</a>','<a href="/#services">Услуги</a>','<a href="/#pricing">Цены</a>','<a href="/#contacts">Контакты</a>'];
   function createMenu(){
     const list=document.createElement("div");
     list.classList.add('menu');
