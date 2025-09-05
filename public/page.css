@@ -38,7 +38,12 @@ header, footer {
 header h1, footer p {
     margin: 0;
 }
-
+header{
+    display:flex;
+    justify-content: space-around;
+    align-items: start;
+    width:100%;
+}
 nav a {
     margin: 0 15px;
     font-weight: bold;
@@ -106,4 +111,52 @@ button:hover, .btn:hover {
     h1 { font-size: 2rem; }
     h2 { font-size: 1.5rem; }
     main { padding: 0 15px; }
+}
+
+.nav > span{
+  display:none;
+}
+@media(max-width:700px){
+  .nav > a{
+    display:none;
+  }
+  .nav > span{
+    display:block;
+    background-color: var(--yellow);
+    width:70px;
+    height:3px;
+  }
+  /* .nav > span:hover{
+    background-color:var(--green);
+  } */
+  /* body > main > header > nav > span:nth-child(6) */
+  .nav > span:nth-child(2){
+    width:54px;
+    margin:7px;
+  }
+}
+.menu{
+  display:grid;
+  align-content: center;
+  justify-content: center;
+  width:100%;
+  height:1vh;
+  position:fixed;
+  top:0;
+  background-color: #0a0a0a;
+  z-index: 1001;
+  transition: all 1s ease-out;
+  font-size:0px;
+  opacity:0;
+}
+.menu > a{
+  font-size:1px;
+  transition: all 1s ease-out;
+  opacity:0;
+  color:#00b050;
+  text-decoration: none;
+}
+.menu > a:hover{
+  color:#ffd500;
+  transition: all 1s ease-out;
 }
