@@ -1,3 +1,12 @@
+/* Fonts & Colors */
+:root {
+  --black: #0a0a0a;
+  --yellow: #ffd500;
+  --green: #00b050;
+  --white: #fff;
+  --gray: #ccc;
+}
+
 /* Общие стили для всего сайта */
 body {
     margin: 0;
@@ -10,18 +19,18 @@ body {
 }
 
 a {
-    color: #007bff;
+    color: #1eff00;
     text-decoration: none;
     transition: color 0.3s;
 }
 
 a:hover {
-    color: #0056b3;
+    color: #48b300;
 }
 
 header, footer {
-    background-color: #1f3727;
-    color: #fff;
+    background-color: var(--black);
+    color: var(--gray);
     padding: 20px 0;
     text-align: center;
 }
@@ -44,10 +53,12 @@ article{
     color:white;
     text-shadow: 1px 1px black;
 }
-h1, h2, h3 {
-    color: #111827;
+h1 {
+    color:var(--green);
 }
-
+h2, h3 {
+    color:var(--yellow);
+}
 h1 {
     font-size: 2.5rem;
     margin-bottom: 20px;
@@ -74,7 +85,7 @@ button, .btn {
     border: none;
     border-radius: 6px;
     cursor: pointer;
-    transition: background 0.3s;
+    transition: all ease-out 0.3s;
 }
 
 button:hover, .btn:hover {
