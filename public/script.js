@@ -26,7 +26,8 @@ function onclick(){
   })
 }
 function openMenu(){
-  const listA=['<a href="/">Main</a>','<a href="/about">О нас</a>','<a href="#services">Услуги</a>','<a href="#pricing">Цены</a>','<a href="#contacts">Контакты</a>'];
+  if(window.innerWidth<=700){
+    const listA=['<a href="/">Main</a>','<a href="/about">О нас</a>','<a href="#services">Услуги</a>','<a href="#pricing">Цены</a>','<a href="#contacts">Контакты</a>'];
   function createMenu(){
     const list=document.createElement("div");
     list.classList.add('menu');
@@ -51,6 +52,10 @@ function openMenu(){
         document.querySelector(".menu").remove();
       },777);
     });
+  }
+  
+  }else{
+    console.log('else');
   }
   document.querySelector(".nav").addEventListener("click", createMenu);
 }
