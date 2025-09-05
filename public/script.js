@@ -26,7 +26,7 @@ function onclick(){
     window.location.href="https://wa.me/+79528885656?text=hi! I need landing page!"
   });
   }else{
-    console.log('else onclick');
+    // console.log('else onclick');
   }
   
 };//onclick()
