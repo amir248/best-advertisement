@@ -38,6 +38,10 @@ body {
   font-size: 1.5rem;
   font-weight: bold;
   color: var(--yellow);
+  transition:all ease-out 1s;
+}
+.logo:hover{
+  color:var(--green);
 }
 
 .nav a {
@@ -61,7 +65,11 @@ body {
   border-radius: 6px;
   cursor: pointer;
 }
-
+.btn-header:hover{
+  color:black;
+  background-color:#ffd500;
+  transition:all ease-out 1s;
+}
 /* Hero */
 .hero {
   display: flex;
@@ -223,6 +231,9 @@ h2 {
     width:70px;
     height:3px;
   }
+  /* .nav > span:hover{
+    background-color:var(--green);
+  } */
   /* body > main > header > nav > span:nth-child(6) */
   .nav > span:nth-child(6){
     width:54px;
