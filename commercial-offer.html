@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>commercial offer</title>
+    <meta name="description" content="Заказать лендинг пейдж под ключ недорого у профессионала.">
+</head>
+<body>
+    <main>
+        <article>
+<table id="rus" style="display: block;">
+                    <tbody><tr>
+                    <td colspan="2">Offer</td>
+                    <td>Price</td>
+                    <td></td>
+                    
+                    </tr>
+                    <tr>
+                        
+                    <td>
+                        <label>
+                            Консультация <input type="checkbox" id="consultation">:
+                        </label>
+                    </td>
+                    <td>~1 hour</td>
+                    <td>$100</td>
+                    
+                    </tr>
+                    <tr>
+                    <td>Лендинг пейдж по макету Figma 1 слайд:</td>
+                    <td>~1 min - 30 minutes</td>
+                    <td>$5</td>
+                    
+                    </tr>
+                    <tr>
+                    <td>Лендинг пейдж по макету Figma, 3 слайда:</td>
+                    <td>~15 min - 1.5 hours</td>
+                    <td>$15</td>
+                    
+                    </tr>
+                    <tr>
+                    <td>
+                        <label>
+                            SEO оптимизация: <input type="checkbox" id="seo">
+                        </label>
+                    </td>
+                    <td>~1 day - 1 week</td>
+                    <td>$10</td>
+                    
+                    </tr>
+                    <tr>
+                    <td>
+                        <label>
+                            Сбор ключевых слов, составление семантического ядра: <input type="checkbox" id="semanticCore">
+                        </label>
+                    </td>
+                    <td>~1 day - 1 week</td>
+                    <td>$10</td>
+                    
+                    </tr>
+                    <tr>
+                    <td>
+                        <label>
+                            Закуск конткестной рекламы яндекс <input type="checkbox" id="yandex"> :
+                        </label>
+                    </td>
+                    <td>~1 day - 1 week</td>
+                    <td>$150</td>
+                    
+                    </tr>
+                    <tr>
+                    <td>
+                        <label>
+                            Запуск контестной рекламы google <input type="checkbox" id="google">:
+                        </label>
+                    </td>
+                    <td>~1 week - 3 months</td>
+                    <td>$200</td>
+                    
+                    </tr>
+                    <tr>
+                        <td>Установка в лендинг 
+                        <a href="https://github.com/amir248/javascript-menu-for-landing">адаптивного меню с гитхаба АмирДжана</a>:<input type="checkbox" id="menuR"></td>
+                        <td>~15 minutes - 3 hours</td>
+                        <td>10$</td>
+                    
+                    </tr>
+                    </tbody></table>
+        </article>
+    </main>
+</body>
+<script>
+function countPrice(prefix = "") {
+    const get = (id) => document.querySelector(`#${id}${prefix}`);
+
+    const value = +get("slides")?.value || 0;
+    const price = get("oneSlideo")?.checked ? +get("price")?.value || 0 : 0;
+
+    const options = [
+        ["consultation", 100],
+        ["seo", 10],
+        ["semanticCore", 10],
+        ["google", 200],
+        ["yandex", 150],
+        ["menuR", 10],
+    ];
+
+    const extras = options.reduce((sum, [id, cost]) => 
+        sum + (get(id)?.checked ? cost : 0), 0
+    );
+
+    const summa = value * price;
+    const fullSumma = summa + extras;
+
+    if (get("summa")) get("summa").innerHTML = summa;
+    if (get("summaTwo")) get("summaTwo").innerHTML = fullSumma;
+    if (get("totalToPay")) get("totalToPay").innerHTML = fullSumma;
+    if (get("oneSlide")) get("oneSlide").innerHTML = price;
+}
+
+// ----------------- Навешиваем слушатели -----------------
+function setupCalc(prefix = "") {
+    const ids = ["slides","price","oneSlideo","consultation","seo",
+                 "semanticCore","google","yandex","menuR"];
+
+    ids.forEach(id => {
+        const el = document.querySelector(`#${id}${prefix}`);
+        if (el) el.addEventListener("input", () => countPrice(prefix));
+        if (el) el.addEventListener("click", () => countPrice(prefix));
+    });
+
+    // первый запуск
+    countPrice(prefix);
+}
+
+// запускаем для RU и ENG
+setupCalc("");
+setupCalc("Eng");
+</script>
+
+</html>
