@@ -39,6 +39,7 @@ body {
   font-weight: bold;
   color: var(--yellow);
   transition:all ease-out 1s;
+  text-align: center;
 }
 .logo:hover{
   color:var(--green);
@@ -64,6 +65,7 @@ body {
   border-radius: 6px;
   cursor: pointer;
   text-decoration:none;
+  margin-left:17px;
 }
 .btn-header:hover{
   color:black;
