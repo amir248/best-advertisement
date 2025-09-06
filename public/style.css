@@ -266,3 +266,31 @@ h2 {
   color:#ffd500;
   transition: all 1s ease-out;
 }
+
+/* feedBackForm */
+#feedbackForm input,
+  #feedbackForm textarea {
+      background-color: var(--green); /* светло-голубой фон */
+      color: #000000;           /* черный текст */
+      border: 1px solid black;   /* рамка */
+      padding: 10px;
+      border-radius: 5px;
+      width: 100%;
+      box-sizing: border-box;
+      margin-bottom: 10px;
+      font-size: 16px;
+  }
+
+  #feedbackForm button {
+      background-color: var(--green); /* зеленая кнопка */
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+  }
+
+  #feedbackForm button:hover {
+      background-color: #45a049; /* немного темнее при наведении */
+  }
