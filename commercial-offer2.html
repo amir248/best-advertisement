@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Коммерческое предложение — Лэндинг под ключ</title>
+  <style>
+    body { font-family: 'Segoe UI', Tahoma, sans-serif; margin: 0; background: #f9fafb; color: #333; }
+    header { background: linear-gradient(135deg, #4f46e5, #06b6d4); color: white; padding: 2rem; text-align: center; }
+    header h1 { font-size: 2.5rem; margin-bottom: .5rem; }
+    header p { font-size: 1.2rem; opacity: .9; }
+    section { max-width: 900px; margin: 2rem auto; padding: 1rem; }
+    h2 { text-align: center; margin-bottom: 1.5rem; color: #4f46e5; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; }
+    .card { background: white; border-radius: 12px; padding: 1.5rem; box-shadow: 0 4px 10px rgba(0,0,0,0.08); transition: transform .2s; }
+    .card:hover { transform: translateY(-5px); }
+    .card h3 { margin-top: 0; color: #06b6d4; font-size: 1.2rem; }
+    .card p { margin: .5rem 0 0; font-weight: bold; color: #111; }
+    .bank { background: #f1f5f9; padding: 1rem; border-radius: 10px; font-family: monospace; white-space: pre-line; }
+    .btn { display: inline-block; background: #4f46e5; color: white; padding: .7rem 1.5rem; margin-top: 1rem; border-radius: 8px; text-decoration: none; font-weight: bold; transition: background .2s; }
+    .btn:hover { background: #4338ca; }
+    footer { text-align: center; padding: 1rem; background: #111827; color: #aaa; margin-top: 2rem; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Коммерческое предложение</h1>
+    <p>Landing Page под ключ — быстро, стильно и недорого</p>
+  </header>
+
+  <section>
+    <h2>Наши услуги и цены</h2>
+    <div class="grid" id="servicesGrid">
+      <!-- Карточки подгрузятся через JS -->
+    </div>
+  </section>
+
+  <section>
+    <h2>Счёт на оплату</h2>
+    <div class="bank">
+ИНН 701717399284  
+Получатель: ИП Наврутдинов Амир Рамильевич  
+Банк: ВТБ  
+БИК: 044525411  
+Счёт: 40802810912750000195  
+    </div>
+    <a class="btn" href="javascript:window.print()">Распечатать счёт</a>
+  </section>
+
+  <footer>
+    © 2025 Все права защищены.
+  </footer>
+
+  <script>
+    const services = [
+      { title: "Консультация", price: "$100" },
+      { title: "Лендинг (1 слайд Figma)", price: "$5" },
+      { title: "Лендинг (3 слайда Figma)", price: "$15" },
+      { title: "SEO оптимизация", price: "$10" },
+      { title: "Семантическое ядро", price: "$10" },
+      { title: "Яндекс реклама", price: "$150" },
+      { title: "Google реклама", price: "$200" },
+      { title: "Адаптивное меню", price: "$10" },
+      { title: "Установка Debian", price: "$70" }
+    ];
+
+    const grid = document.getElementById("servicesGrid");
+
+    services.forEach(service => {
+      const card = document.createElement("div");
+      card.className = "card";
+      card.innerHTML = `<h3>${service.title}</h3><p>${service.price}</p>`;
+      grid.appendChild(card);
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Коммерческое предложение</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 30px; }
+    .service { margin: 10px 0; }
+    .invoice { margin-top: 20px; padding: 15px; border: 1px solid #ccc; border-radius: 8px; }
+    .invoice h3 { margin-top: 0; }
+    .total { font-weight: bold; margin-top: 10px; }
+    label { display: flex; align-items: center; justify-content: space-between; width: 350px; }
+    input[type="number"] { width: 60px; margin-left: 10px; }
+  </style>
+</head>
+<body>
+  <h2>Выберите услуги</h2>
+
+  <div class="service">
+    <label>
+      <input type="checkbox" data-name="SEO оптимизация" data-price="300"> SEO оптимизация ($300)
+    </label>
+  </div>
+
+  <div class="service">
+    <label>
+      <input type="checkbox" data-name="Поддержка сайта" data-price="200"> Поддержка сайта ($200)
+    </label>
+  </div>
+
+  <div class="service">
+    <label>
+      Лендинг (слайды из Figma) – $50/слайд
+      <input type="number" id="slides" value="0" min="0">
+    </label>
+  </div>
+
+  <div class="service">
+    <label>
+      Консультация – $100/час
+      <input type="number" id="consulting" value="0" min="0">
+    </label>
+  </div>
+
+  <div class="invoice">
+    <h3>Счёт-фактура</h3>
+    <ul id="invoiceList"></ul>
+    <div class="total" id="total"></div>
+    <div class="total" id="totalWithVAT"></div>
+  </div>
+
+  <script>
+    const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+    const slidesInput = document.getElementById("slides");
+    const consultingInput = document.getElementById("consulting");
+    const invoiceList = document.getElementById("invoiceList");
+    const totalEl = document.getElementById("total");
+    const totalWithVATEl = document.getElementById("totalWithVAT");
+
+    function updateInvoice() {
+      let items = [];
+      let total = 0;
+
+      // чекбоксы
+      checkboxes.forEach(cb => {
+        if (cb.checked) {
+          let name = cb.dataset.name;
+          let price = parseFloat(cb.dataset.price);
+          items.push(`${name} — $${price}`);
+          total += price;
+        }
+      });
+
+      // лендинг (слайды)
+      const slides = parseInt(slidesInput.value) || 0;
+      if (slides > 0) {
+        let price = slides * 50;
+        items.push(`Лендинг — ${slides} слайд(ов) × $50 = $${price}`);
+        total += price;
+      }
+
+      // консультация (часы)
+      const consulting = parseInt(consultingInput.value) || 0;
+      if (consulting > 0) {
+        let price = consulting * 100;
+        items.push(`Консультация — ${consulting} час(ов) × $100 = $${price}`);
+        total += price;
+      }
+
+      // вывод
+      invoiceList.innerHTML = items.map(i => `<li>${i}</li>`).join("");
+      totalEl.textContent = `Итого (без НДС): $${total}`;
+      totalWithVATEl.textContent = `Итого (с НДС 20%): $${(total * 1.2).toFixed(2)}`;
+    }
+
+    // события
+    checkboxes.forEach(cb => cb.addEventListener("change", updateInvoice));
+    slidesInput.addEventListener("input", updateInvoice);
+    consultingInput.addEventListener("input", updateInvoice);
+
+    updateInvoice();
+  </script>
+</body>
+</html>

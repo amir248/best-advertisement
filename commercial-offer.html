@@ -1,142 +1,282 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>commercial offer</title>
-    <meta name="description" content="Заказать лендинг пейдж под ключ недорого у профессионала.">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Коммерческое предложение</title>
+  <style>
+    :root {
+  --black: #0a0a0a;
+  --yellow: #ffd500;
+  --green: #00b050;
+  --white: #fff;
+  --gray: #ccc;
+}
+    body { font-family: 'Segoe UI', Tahoma, sans-serif; margin: 0; background: var(--black); color: #333; }
+    header { background: linear-gradient(135deg, #1b1b1b, #30332f); color: var(--yellow); padding: 2rem; text-align: center; }
+    header h1 { font-size: 2.5rem; margin-bottom: .5rem; }
+    section { max-width: 1000px; margin: 2rem auto; padding: 1rem; }
+    h2 { text-align: center; margin-bottom: 1.5rem; color: var(--green); }
+
+    .service-item { display: flex; align-items: center; justify-content: space-between; background: var(--green); padding: 1rem; margin: .5rem 0; border-radius: 10px; box-shadow: 0 2px 6px rgba(0,0,0,0.08); }
+    .service-item label { flex: 1; cursor: pointer; }
+    .service-item span { font-weight: bold; color: #06b6d4; margin-left: 1rem; }
+    .controls { display: flex; align-items: center; gap: 8px; }
+    .controls button { width: 30px; height: 30px; border: none; background: var(--black); color: white; border-radius: 6px; cursor: pointer; font-size: 18px; }
+    .controls button:hover { background: var(--yellow); }
+    .controls input { width: 50px; text-align: center; padding: 4px; border: 1px solid #ccc; border-radius: 6px; }
+
+    table { width: 100%; border-collapse: collapse; margin-top: 2rem; background: var(--green); border-radius: 12px; overflow: hidden; }
+    th, td { padding: 0.8rem; border: 0px solid #ddd; text-align: left; }
+    th { background:var(--gray); color: black; }
+    tfoot td { font-weight: bold; }
+
+    .btn { display: inline-block; background: var(--yellow); color: var(--black); padding: .7rem 1.5rem; margin-top: 1rem; border-radius: 8px; text-decoration: none; font-weight: bold; transition: background .2s; }
+    .btn:hover { background: var(--green); }
+
+    tbody {
+        display: table-row-group;
+        vertical-align: middle;
+        unicode-bidi: isolate;
+        border-color: inherit;
+    }
+    tr {
+        display: table-row;
+        vertical-align: inherit;
+        unicode-bidi: isolate;
+        border-color: inherit;
+    }
+    /* table{
+border-spacing: 0px;
+border-collapse: collapse;
+} */
+    @media print {
+      /* All your print styles go here */
+      header,
+      footer,
+      nav {
+        display: none !important;
+      }
+      body > section:nth-child(4) > a{
+        display: none;
+      }
+      body > section:nth-child(3){
+        display:none;
+      }
+      th, td {
+        padding: 0.1rem;
+        border: 0px solid #ddd;
+        text-align: left;
+      }
+    }
+  </style>
 </head>
 <body>
-    <main>
-        <article>
-<table id="rus" style="display: block;">
-                    <tbody><tr>
-                    <td colspan="2">Offer</td>
-                    <td>Price</td>
-                    <td></td>
-                    
-                    </tr>
-                    <tr>
-                        
-                    <td>
-                        <label>
-                            Консультация <input type="checkbox" id="consultation">:
-                        </label>
-                    </td>
-                    <td>~1 hour</td>
-                    <td>$100</td>
-                    
-                    </tr>
-                    <tr>
-                    <td>Лендинг пейдж по макету Figma 1 слайд:</td>
-                    <td>~1 min - 30 minutes</td>
-                    <td>$5</td>
-                    
-                    </tr>
-                    <tr>
-                    <td>Лендинг пейдж по макету Figma, 3 слайда:</td>
-                    <td>~15 min - 1.5 hours</td>
-                    <td>$15</td>
-                    
-                    </tr>
-                    <tr>
-                    <td>
-                        <label>
-                            SEO оптимизация: <input type="checkbox" id="seo">
-                        </label>
-                    </td>
-                    <td>~1 day - 1 week</td>
-                    <td>$10</td>
-                    
-                    </tr>
-                    <tr>
-                    <td>
-                        <label>
-                            Сбор ключевых слов, составление семантического ядра: <input type="checkbox" id="semanticCore">
-                        </label>
-                    </td>
-                    <td>~1 day - 1 week</td>
-                    <td>$10</td>
-                    
-                    </tr>
-                    <tr>
-                    <td>
-                        <label>
-                            Закуск конткестной рекламы яндекс <input type="checkbox" id="yandex"> :
-                        </label>
-                    </td>
-                    <td>~1 day - 1 week</td>
-                    <td>$150</td>
-                    
-                    </tr>
-                    <tr>
-                    <td>
-                        <label>
-                            Запуск контестной рекламы google <input type="checkbox" id="google">:
-                        </label>
-                    </td>
-                    <td>~1 week - 3 months</td>
-                    <td>$200</td>
-                    
-                    </tr>
-                    <tr>
-                        <td>Установка в лендинг 
-                        <a href="https://github.com/amir248/javascript-menu-for-landing">адаптивного меню с гитхаба АмирДжана</a>:<input type="checkbox" id="menuR"></td>
-                        <td>~15 minutes - 3 hours</td>
-                        <td>10$</td>
-                    
-                    </tr>
-                    </tbody></table>
-        </article>
-    </main>
-</body>
-<script>
-function countPrice(prefix = "") {
-    const get = (id) => document.querySelector(`#${id}${prefix}`);
+  <header>
+    <h1>Коммерческое предложение</h1>
+    <p>Выберите услуги и сформируйте счёт</p>
+  </header>
+  <section>
+    <table>
+      <tbody>
+        <tr>
+          <th></th>
+          <th></th>
+          <th colspan="3">Счет&nbsp;на&nbsp;оплату</th>
+        </tr>
+        <tr>
+      
+          <td colspan="2">ИНН 701717399284</td>
+          <td colspan="2">КПП</td>
+      
+        
+          <td rowspan="2">Сч. №</td>
+          <td colspan="2" rowspan="2">40802810912750000195</td>
+        </tr>
+        <tr>
+          <td colspan="4">Получатель: ИП Наврутдинов Амир Рамильевич</td>
+          
+        </tr>
+        <tr>
+          <td colspan="4" rowspan="2">Банк получателя:
+              ФИЛИАЛ "ЦЕНТРАЛЬНЫЙ" БАНКА ВТБ (ПАО)</td>
+          <td colspan="2">БИК</td>
+          <td>044525411</td>
+        </tr>
+        <tr>
+          <td>Сч. №</td>
+          <td colspan="2">30101810145250000411</td>
+          
+        </tr>
+      </tbody>
+    </table>
+    <picture>
+    <img src="QRcode.webp" alt="оплатить Landing Page по макету из фигмы">
+  </picture>
+  </section>
+  <section>
+    <h2>Наши услуги</h2>
+    <div id="servicesList"></div>
+  </section>
 
-    const value = +get("slides")?.value || 0;
-    const price = get("oneSlideo")?.checked ? +get("price")?.value || 0 : 0;
-
-    const options = [
-        ["consultation", 100],
-        ["seo", 10],
-        ["semanticCore", 10],
-        ["google", 200],
-        ["yandex", 150],
-        ["menuR", 10],
+  <section>
+    <h2>Счёт-фактура № 3 от <span id="date"></span></h2>
+    <table id="invoiceTable" style="display:none;">
+      <thead>
+        <tr>
+          <th>Наименование</th>
+          <th>Цена</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+      <tfoot>
+        <tr>
+          <td>Итого (без НДС)</td>
+          <td id="totalNoVAT">0</td>
+        </tr>
+        <tr>
+          <td>НДС (0.4%)</td>
+          <td id="vat">0</td>
+        </tr>
+        <tr>
+          <td>НДС (0,6%)</td>
+          <td id="vat2">0</td>
+        </tr>
+        <tr>
+          <td><b>Итого с НДС физ. лица</b></td>
+          <td id="totalWithVAT"><b>0</b></td>
+        </tr>
+        <tr>
+          <td><b>Итого с НДС юр. лица</b></td>
+          <td id="totalWithVAT2"><b>0</b></td>
+        </tr>
+      </tfoot>
+    </table>
+    <a class="btn" href="javascript:window.print()">Распечатать счёт</a>
+  </section>
+  
+  <script>
+    const d=new Date();
+    document.querySelector("#date").innerHTML=d.getDay()+"/"+d.getMonth()+"/"+d.getFullYear();
+    const services = [
+      { id: "consulting", title: "Консультация", price: 100 },
+      { id: "landing", title: "Лендинг (слайд Figma)", price: 50, countable: true },
+      { id: "seo", title: "SEO оптимизация", price: 100 },
+      { id: "semantic", title: "SEO аудит", price: 150 },
+      { id: "support",title:"Поддержка сайта \месяц", price:300},
+      { id: "yandex", title: "Яндекс реклама", price: 150 },
+      { id: "google", title: "Google реклама", price: 200 },
+      { id: "menu", title: "Адаптивное меню", price: 25 }
     ];
 
-    const extras = options.reduce((sum, [id, cost]) => 
-        sum + (get(id)?.checked ? cost : 0), 0
-    );
+    const servicesList = document.getElementById("servicesList");
+    const invoiceTable = document.getElementById("invoiceTable");
+    const invoiceBody = invoiceTable.querySelector("tbody");
+    const totalNoVATEl = document.getElementById("totalNoVAT");
+    const vatEl = document.getElementById("vat");
+    const vatEl2 = document.getElementById("vat2");
+    const totalWithVATEl = document.getElementById("totalWithVAT");
+    const totalWithVATEl2 = document.getElementById("totalWithVAT2");
 
-    const summa = value * price;
-    const fullSumma = summa + extras;
+    const selected = {};
 
-    if (get("summa")) get("summa").innerHTML = summa;
-    if (get("summaTwo")) get("summaTwo").innerHTML = fullSumma;
-    if (get("totalToPay")) get("totalToPay").innerHTML = fullSumma;
-    if (get("oneSlide")) get("oneSlide").innerHTML = price;
-}
+    // Рисуем список услуг
+    services.forEach(service => {
+      const div = document.createElement("div");
+      div.className = "service-item";
 
-// ----------------- Навешиваем слушатели -----------------
-function setupCalc(prefix = "") {
-    const ids = ["slides","price","oneSlideo","consultation","seo",
-                 "semanticCore","google","yandex","menuR"];
+      let innerHTML = `
+        <label>
+          <input type="checkbox" data-id="${service.id}">
+          ${service.title}
+        </label>
+        <span>$${service.price}${service.countable ? " / слайд" : ""}</span>
+      `;
 
-    ids.forEach(id => {
-        const el = document.querySelector(`#${id}${prefix}`);
-        if (el) el.addEventListener("input", () => countPrice(prefix));
-        if (el) el.addEventListener("click", () => countPrice(prefix));
+      div.innerHTML = innerHTML;
+
+      if (service.countable) {
+        const controls = document.createElement("div");
+        controls.className = "controls";
+        controls.innerHTML = `
+          <button type="button" class="minus">-</button>
+          <input type="number" value="1" min="1">
+          <button type="button" class="plus">+</button>
+        `;
+        div.appendChild(controls);
+
+        // обработчики +/- для слайдов
+        const minus = controls.querySelector(".minus");
+        const plus = controls.querySelector(".plus");
+        const input = controls.querySelector("input");
+
+        minus.addEventListener("click", () => {
+          if (input.value > 1) {
+            input.value--;
+            if (selected[service.id]) updateInvoice();
+          }
+        });
+        plus.addEventListener("click", () => {
+          input.value++;
+          if (selected[service.id]) updateInvoice();
+        });
+        input.addEventListener("input", () => {
+          if (input.value < 1) input.value = 1;
+          if (selected[service.id]) updateInvoice();
+        });
+
+        service.inputEl = input;
+      }
+
+      const checkbox = div.querySelector("input[type=checkbox]");
+      checkbox.addEventListener("change", (e) => {
+        if (e.target.checked) {
+          selected[service.id] = service;
+        } else {
+          delete selected[service.id];
+        }
+        updateInvoice();
+      });
+
+      servicesList.appendChild(div);
     });
 
-    // первый запуск
-    countPrice(prefix);
-}
+    function updateInvoice() {
+      invoiceBody.innerHTML = "";
+      let total = 0;
 
-// запускаем для RU и ENG
-setupCalc("");
-setupCalc("Eng");
-</script>
+      Object.values(selected).forEach(service => {
+        let count = 1;
+        if (service.countable) count = parseInt(service.inputEl.value) || 1;
+        let price = service.price * count;
 
+        const row = document.createElement("tr");
+        row.innerHTML = `<td>${service.title}${service.countable ? ` (${count} слайдов)` : ""}</td><td>$${price}</td>`;
+        invoiceBody.appendChild(row);
+
+        total += price;
+      });
+
+      if (Object.keys(selected).length > 0) {
+        invoiceTable.style.display = "table";
+      } else {
+        invoiceTable.style.display = "none";
+      }
+
+      let vat = total * 0.004;
+      let totalWithVAT = total + vat;
+
+      totalNoVATEl.textContent = `$${total.toFixed(2)}`;
+      vatEl.textContent = `$${vat.toFixed(2)}`;
+      totalWithVATEl.textContent = `$${totalWithVAT.toFixed(2)}`;
+
+      let vat2 = total * 0.006;
+      let totalWithVAT2 = total + vat2;
+
+      totalNoVATEl.textContent = `$${total.toFixed(2)}`;
+      vatEl2.textContent = `$${vat2.toFixed(2)}`;
+      totalWithVATEl2.textContent = `$${totalWithVAT2.toFixed(2)}`;
+    }
+  </script>
+</body>
 </html>

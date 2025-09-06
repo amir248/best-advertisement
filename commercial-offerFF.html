@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Коммерческое предложение</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 30px; background: #f4f6f9; color: #333; }
+    h1 { text-align: center; margin-bottom: 20px; }
+    .services { max-width: 600px; margin: 0 auto; background: #fff; padding: 20px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+    label { display: flex; justify-content: space-between; margin: 12px 0; align-items: center; }
+    input[type="number"] { width: 70px; text-align: center; }
+    #invoice { margin-top: 30px; padding: 20px; background: #fff; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+    table { width: 100%; border-collapse: collapse; margin-top: 10px; }
+    th, td { padding: 10px; border-bottom: 1px solid #ddd; text-align: right; }
+    th:first-child, td:first-child { text-align: left; }
+    .total { font-weight: bold; }
+  </style>
+</head>
+<body>
+
+<h1>Коммерческое предложение</h1>
+
+<div class="services">
+  <label>
+    <input type="checkbox" data-price="120" id="landing"> Лендинг (1 экран = $120)
+    <input type="number" id="landing-slides" value="1" min="1" disabled>
+  </label>
+  
+  <label>
+    <input type="checkbox" data-price="1200" id="multi"> Многостраничный сайт ($1200)
+  </label>
+  
+  <label>
+    <input type="checkbox" data-price="2500" id="shop"> Интернет-магазин ($2500)
+  </label>
+  
+  <label>
+    <input type="checkbox" data-price="150" id="seo"> SEO аудит ($150)
+  </label>
+  
+  <label>
+    <input type="checkbox" data-price="300" id="support"> Поддержка сайта (месяц) ($300)
+  </label>
+  
+  <label>
+    <input type="checkbox" data-price="50" id="consult"> Консультация ($50/час)
+    <input type="number" id="consult-hours" value="1" min="1" disabled>
+  </label>
+</div>
+
+<div id="invoice">
+  <h2>Счёт-фактура</h2>
+  <table id="invoice-table">
+    <thead>
+      <tr><th>Услуга</th><th>Цена</th></tr>
+    </thead>
+    <tbody></tbody>
+    <tfoot>
+      <tr class="total"><td>Итого без НДС:</td><td id="subtotal">$0</td></tr>
+      <tr><td>НДС (20%):</td><td id="vat">$0</td></tr>
+      <tr class="total"><td>Итого с НДС:</td><td id="total">$0</td></tr>
+    </tfoot>
+  </table>
+</div>
+
+<script>
+const services = document.querySelectorAll(".services input[type=checkbox]");
+const tbody = document.querySelector("#invoice-table tbody");
+const subtotalEl = document.getElementById("subtotal");
+const vatEl = document.getElementById("vat");
+const totalEl = document.getElementById("total");
+
+function updateInvoice() {
+  tbody.innerHTML = "";
+  let subtotal = 0;
+
+  services.forEach(service => {
+    if (service.checked) {
+      let price = parseFloat(service.dataset.price);
+      let name = service.parentElement.textContent.trim();
+
+      // Лендинг со слайдами
+      if (service.id === "landing") {
+        const slides = document.getElementById("landing-slides").value;
+        price *= slides;
+        name = `Лендинг (${slides} экранов)`;
+      }
+
+      // Консультация с часами
+      if (service.id === "consult") {
+        const hours = document.getElementById("consult-hours").value;
+        price *= hours;
+        name = `Консультация (${hours} час)`;
+      }
+
+      subtotal += price;
+
+      const row = `<tr><td>${name}</td><td>$${price}</td></tr>`;
+      tbody.insertAdjacentHTML("beforeend", row);
+    }
+  });
+
+  const vat = subtotal * 0.2;
+  const total = subtotal + vat;
+
+  subtotalEl.textContent = `$${subtotal}`;
+  vatEl.textContent = `$${vat}`;
+  totalEl.textContent = `$${total}`;
+}
+
+// Включаем/отключаем поля для слайдов и часов
+document.getElementById("landing").addEventListener("change", function() {
+  document.getElementById("landing-slides").disabled = !this.checked;
+  updateInvoice();
+});
+
+document.getElementById("consult").addEventListener("change", function() {
+  document.getElementById("consult-hours").disabled = !this.checked;
+  updateInvoice();
+});
+
+// Считаем при изменении чисел
+document.getElementById("landing-slides").addEventListener("input", updateInvoice);
+document.getElementById("consult-hours").addEventListener("input", updateInvoice);
+
+// Считаем при изменении чекбоксов
+services.forEach(service => service.addEventListener("change", updateInvoice));
+</script>
+
+</body>
+</html>
