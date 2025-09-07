@@ -104,6 +104,7 @@ border-collapse: collapse;
       accent-color:rgb(187, 117, 117);
     }
   </style>
+  <link rel="stylesheet" href="public/header.css">
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -182,23 +183,27 @@ border-collapse: collapse;
   <link rel="icon" type="image/x-icon" href="public/img/ico.svg">
 </head>
 <body>
-  
-  <header>
-    <!-- <header class="header">  -->
-    <div class="logo">Web Work<wbr>shop</div>
-    <nav class="nav">
-      <a href="/about">О нас</a>
-      <a href="#services">Услуги</a>
-      <a href="#pricing">Цены</a>
-      <a href="#contacts">Контакты</a>
-      <a href="/proposal">Предложение</a>
-      <a href="/commercial-offer">Коммерческий офер</a>
-      <span></span>
-      <span></span>
-      <span></span>
-    </nav>
+   <!-- <header class="header">  -->
+    <div class="header">
+      <div class="logo">Web Work<wbr>shop</div>
+      <nav class="nav">
+        <a href="/about">О нас</a>
+        <a href="#services">Услуги</a>
+        <a href="#pricing">Цены</a>
+        <a href="#contacts">Контакты</a>
+        <a href="/proposal">Предложение</a>
+        <a href="/commercial-offer">Коммерческий офер</a>
+        <span></span>
+        <span></span>
+        <span></span>
+      </nav>
     <a class="btn-header" href="https://wa.me/+79528885656?text=I need a Landing Page!">WhatsApp</a>
-  <!-- </header> -->
+    </div>
+    <!-- </header> -->
+  <header>
+   
+   
+   
     <h1>Коммер<wbr>ческое пред<wbr>ложение</h1>
     <p>Выберите услуги и сформируйте счёт</p>
     <div>Курс доллара: <span id="usd-rate">загрузка...</span></div>
@@ -293,7 +298,7 @@ border-collapse: collapse;
     </table>
     <a class="btn" href="javascript:window.print()">Распечатать счёт</a>
   </section>
-  
+  <script src="public/script.js"></script>
   <script>
     const d=new Date();
     const monthNames = [

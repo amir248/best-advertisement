@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Коммерческое предложение — Создание сайта</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="public/header.css">
   <style>
      :root {
       --black: #0a0a0a;
@@ -20,7 +21,7 @@
     .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border-radius:14px;padding:26px;box-shadow:0 6px 28px rgba(2,6,23,0.6);border:1px solid rgba(255,255,255,0.03);min-height:100vh;}
     header{display:flex;gap:18px;align-items:center;justify-content:space-between}
     .brand{display:flex;gap:14px;align-items:center}
-    .logo{width:56px;height:56px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#0ea5a3);display:flex;align-items:center;justify-content:center;color:#042027;font-weight:700}
+    /* .logo{width:56px;height:56px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#0ea5a3);display:flex;align-items:center;justify-content:center;color:#042027;font-weight:700} */
     h1{margin:0;font-size:20px}
     .subtitle{color:var(--muted);font-size:13px}
 
@@ -89,15 +90,31 @@
         }
     }
   </script>
-
   <link rel="icon" type="image/x-icon" href="public/img/ico.svg">
 </head>
 <body>
+     <!-- <header class="header">  -->
+    <div class="header">
+      <div class="logo">Web Work<wbr>shop</div>
+      <nav class="nav">
+        <a href="/about">О нас</a>
+        <a href="#services">Услуги</a>
+        <a href="#pricing">Цены</a>
+        <a href="#contacts">Контакты</a>
+        <a href="/proposal">Предложение</a>
+        <a href="/commercial-offer">Коммерческий офер</a>
+        <span></span>
+        <span></span>
+        <span></span>
+      </nav>
+      <a class="btn-header" href="https://wa.me/+79528885656?text=I need a Landing Page!">WhatsApp</a>
+      <!-- </header> -->
+    </div>
   <div class="container">
     <div class="card">
       <header>
         <div class="brand">
-          <div class="logo">Q</div>
+          <!-- <div class="logo">Q</div> -->
           <div>
             <h1>Создание современного сайта — коммерческое предложение</h1>
             <div class="subtitle">Полный цикл: анализ → дизайн → разработка → запуск → поддержка</div>
@@ -193,7 +210,7 @@
 
     <p style="text-align:center;color:var(--muted);font-size:13px;margin-top:8px">Счет фактура: <a href="https://debian-nginx-nodejs.qucu.ru/commercial-offer" style="color:var(--accent)">commercial-offer</a></p>
   </div>
-
+  <script src="public/script.js"></script>
   <script>
     document.querySelector("#page-here").innerHTML=window.location.pathname;
     
