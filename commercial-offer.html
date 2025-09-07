@@ -105,34 +105,39 @@ border-collapse: collapse;
     }
   </style>
   <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Service",
-  "name": "Коммерческое предложение Debian-Nginx-NodeJS",
-  "description": "Подробное коммерческое предложение по созданию веб-сайтов, лендингов и web-приложений с адаптивным дизайном, SEO и интеграцией с мессенджерами.",
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "5",
-    "reviewCount": "10",
-    "bestRating": "5",
-    "worstRating": "1"
-  },
-  "review": [
     {
+      "@context": "https://schema.org/",
       "@type": "Review",
-      "author": { "@type": "Person", "name": "Иван Иванов" },
-      "datePublished": "2025-08-15",
-      "reviewBody": "Отличная работа! Сайт получился современным и удобным.",
-      "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" }
+      "itemReviewed": {
+        "@type": "Web Workshop",
+        "image": "https://debian-nginx-nodejs.qucu.ru/QRcode.webp",
+        "name": "Legal Seafood",
+        "servesCuisine": "Seafood",
+        "priceRange": "$$$",
+        "telephone": "+79528885656",
+        "address" :{
+          "@type": "PostalAddress",
+          "streetAddress": "Lazareva 1",
+          "addressLocality": "Tomsk",
+          "addressRegion": "RUS",
+          "postalCode": "634040",
+          "addressCountry": "RU"
+        }
+      },
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": 5
+      },
+      "author": {
+        "@type": "Person",
+        "name": "Иван Иванов"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "web workshop named after baron saytovertausen"
+      }
     },
-    {
-      "@type": "Review",
-      "author": { "@type": "Person", "name": "Мария Петрова" },
-      "datePublished": "2025-09-01",
-      "reviewBody": "Команда сделала сайт быстро, всё работает и выглядит современно.",
-      "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" }
-    }
-  ],
+
   "url": "https://debian-nginx-nodejs.qucu.ru/commercial-offer",
   "provider": {
     "@type": "Organization",
