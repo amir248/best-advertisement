@@ -110,6 +110,19 @@ border-collapse: collapse;
   <header>
     <h1>Коммер<wbr>ческое пред<wbr>ложение</h1>
     <p>Выберите услуги и сформируйте счёт</p>
+    <div>Курс доллара: <span id="usd-rate">загрузка...</span></div>
+
+    <script>
+      async function getUsdRate() {
+        const res = await fetch("https://www.cbr-xml-daily.ru/daily_json.js");
+        const data = await res.json();
+        const usd = data.Valute.USD.Value;
+        document.querySelector("#usd-rate").innerHTML = usd.toFixed(2) + " ₽";
+      }
+      getUsdRate();
+
+    </script>
+
   </header>
   <section class="qr">
     <table>
