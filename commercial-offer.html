@@ -192,7 +192,12 @@ border-collapse: collapse;
   
   <script>
     const d=new Date();
-    document.querySelector("#date").innerHTML=d.getDay()+"/"+d.getMonth()+"/"+d.getFullYear();
+    const monthNames = [
+      "января", "февраля", "марта", "апреля", "мая", "июня",
+      "июля", "августа", "сентября", "октября", "ноября", "декабря"
+    ];
+    const month = monthNames[d.getMonth()];
+    document.querySelector("#date").innerHTML=d.getDate()+" / "+`${month}`+" / "+d.getFullYear();
     const services = [
       { id: "consulting", title: "Консультация", price: 100 },
       { id: "landing", title: "Лендинг (слайд Figma)", price: 50, countable: true },
