@@ -101,6 +101,13 @@ border-collapse: collapse;
       height:20px;
       accent-color:rgb(187, 117, 117);
     }
+    /* Footer */
+    .footer {
+      background: #111;
+      text-align: center;
+      padding: 20px;
+      color: var(--gray);
+    }
   </style>
   <link rel="stylesheet" href="public/header.css">
   <script type="application/ld+json">
@@ -290,7 +297,7 @@ border-collapse: collapse;
   </section>
 
   <section>
-    <h2>Счёт-фактура № 3 от <span id="date"></span></h2>
+    <h2>Счёт-фактура № 3 от <span id="date2"></span></h2>
     <table id="invoiceTable" style="display:none;">
       <thead>
         <tr>
@@ -324,6 +331,10 @@ border-collapse: collapse;
     </table>
     <a class="btn" href="javascript:window.print()">Распечатать счёт</a>
   </section>
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; Web Workshop Studio — Разработка сайтов и Landing Page <span id="date"></span> All rights reserved.</p>
+  </footer>
   <script src="public/script.js"></script>
   <script>
     const d=new Date();
@@ -332,7 +343,7 @@ border-collapse: collapse;
       "июля", "августа", "сентября", "октября", "ноября", "декабря"
     ];
     const month = monthNames[d.getMonth()];
-    document.querySelector("#date").innerHTML=d.getDate()+" / "+`${month}`+" / "+d.getFullYear();
+    document.querySelector("#date2").innerHTML=d.getDate()+" / "+`${month}`+" / "+d.getFullYear();
     const services = [
       { id: "consulting", title: "Консультация", price: 100 },
       { id: "landing", title: "Лендинг (слайд Figma)", price: 50, countable: true },

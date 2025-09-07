@@ -63,7 +63,7 @@ function openMenu(){
   }
   
   }else{
-    console.log('else');
+    // console.log('else');
   }
   document.querySelector(".nav").addEventListener("click", createMenu);
 }

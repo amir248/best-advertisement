@@ -60,6 +60,13 @@
     .note{font-size:13px;color:var(--muted)}
 
     .badge{display:inline-block;background:rgba(6,182,212,0.12);color:var(--accent);padding:6px 10px;border-radius:999px;font-weight:600;font-size:13px}
+    /* Footer */
+    .footer {
+        background: #111;
+        text-align: center;
+        padding: 20px;
+        color: var(--gray);
+    }
   </style>
   <script type="application/ld+json">
     {
@@ -210,6 +217,10 @@
 
     <p style="text-align:center;color:var(--muted);font-size:13px;margin-top:8px">Счет фактура: <a href="https://debian-nginx-nodejs.qucu.ru/commercial-offer" style="color:var(--accent)">commercial-offer</a></p>
   </div>
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; Web Workshop Studio — Разработка сайтов и Landing Page <span id="date"></span> All rights reserved.</p>
+  </footer>
   <script src="public/script.js"></script>
   <script>
     document.querySelector("#page-here").innerHTML=window.location.pathname;
