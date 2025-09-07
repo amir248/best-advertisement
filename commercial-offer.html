@@ -105,40 +105,114 @@ border-collapse: collapse;
     }
   </style>
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Offer",
-    "name": "Коммерческое предложение от Fonolog / Debian-Nginx-NodeJS",
-    "description": "Подробное коммерческое предложение по созданию веб-сайтов, лендингов и web-приложений с адаптивным дизайном, SEO-оптимизацией и интеграцией с мессенджерами.",
-    "url": "https://debian-nginx-nodejs.qucu.ru/commercial-offer",
-    "priceCurrency": "RUB",
-    "price": "0.00",
-    "availability": "https://schema.org/InStock",
-    "validFrom": "2025-09-07T00:00:00+07:00",
-    "itemOffered": {
-      "@type": "Service",
-      "name": "Создание сайта",
-      "description": "Разработка современного сайта под ваши задачи с адаптивным дизайном и интеграциями."
-    },
-    "provider": {
-      "@type": "Organization",
-      "name": "Fonolog / Debian-Nginx-NodeJS",
-      "url": "https://debian-nginx-nodejs.qucu.ru",
-      "logo": "https://debian-nginx-nodejs.qucu.ru/public/img/ico.svg",
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "telephone": "+7-852-888-5656",
-        "contactType": "customer support",
-        "email": "lucky@mail.qucu.ru"
-      }
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Коммерческое предложение от Fonolog / Debian-Nginx-NodeJS",
+  "description": "Подробное коммерческое предложение по созданию веб-сайтов, лендингов и web-приложений с адаптивным дизайном, SEO и интеграцией с мессенджерами.",
+  "url": "https://debian-nginx-nodejs.qucu.ru/commercial-offer",
+  "provider": {
+    "@type": "Organization",
+    "name": "Fonolog / Debian-Nginx-NodeJS",
+    "url": "https://debian-nginx-nodejs.qucu.ru",
+    "logo": "https://debian-nginx-nodejs.qucu.ru/logo.png",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+7-XXX-XXX-XXXX",
+      "contactType": "customer support",
+      "email": "lucky@mail.qucu.ru"
     }
-  }
-  </script>
+  },
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Услуги веб-разработки",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "name": "Создание сайта-визитки",
+        "description": "Лёгкий и современный сайт для представления компании в сети.",
+        "priceCurrency": "RUB",
+        "price": "15000",
+        "url": "https://debian-nginx-nodejs.qucu.ru/commercial-offer#site-1",
+        "availability": "https://schema.org/InStock",
+        "validFrom": "2025-09-07T00:00:00+07:00"
+      },
+      {
+        "@type": "Offer",
+        "name": "Разработка лендинга",
+        "description": "Адаптивный лендинг для продвижения продукта или услуги.",
+        "priceCurrency": "RUB",
+        "price": "25000",
+        "url": "https://debian-nginx-nodejs.qucu.ru/commercial-offer#site-2",
+        "availability": "https://schema.org/InStock",
+        "validFrom": "2025-09-07T00:00:00+07:00"
+      },
+      {
+        "@type": "Offer",
+        "name": "Интернет-магазин",
+        "description": "Полноценный интернет-магазин с каталогом товаров и интеграцией платежей.",
+        "priceCurrency": "RUB",
+        "price": "50000",
+        "url": "https://debian-nginx-nodejs.qucu.ru/commercial-offer#site-3",
+        "availability": "https://schema.org/InStock",
+        "validFrom": "2025-09-07T00:00:00+07:00"
+      }
+    ]
+  },
+  "hasPart": [
+    {
+      "@type": "CreativeWork",
+      "name": "Кейс: сайт компании XYZ",
+      "description": "Рост конверсии на 35% после редизайна сайта.",
+      "url": "https://debian-nginx-nodejs.qucu.ru/commercial-offer#case-xyz"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Кейс: интернет-магазин ABC",
+      "description": "Увеличение продаж на 50% благодаря адаптивному дизайну.",
+      "url": "https://debian-nginx-nodejs.qucu.ru/commercial-offer#case-abc"
+    }
+  ],
+  "review": [
+    {
+      "@type": "Review",
+      "author": { "@type": "Person", "name": "Иван Иванов" },
+      "datePublished": "2025-08-15",
+      "reviewBody": "Отличная работа! Сайт получился современным и удобным.",
+      "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" }
+    },
+    {
+      "@type": "Review",
+      "author": { "@type": "Person", "name": "Мария Петрова" },
+      "datePublished": "2025-08-20",
+      "reviewBody": "Быстро сделали лендинг, всё как договорились.",
+      "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" }
+    }
+  ]
+}
+</script>
+
 
   <link rel="icon" type="image/x-icon" href="public/img/ico.svg">
 </head>
 <body>
+  
   <header>
+    <!-- <header class="header">  -->
+    <div class="logo">Web Work<wbr>shop</div>
+    <nav class="nav">
+      <a href="/about">О нас</a>
+      <a href="#services">Услуги</a>
+      <a href="#pricing">Цены</a>
+      <a href="#contacts">Контакты</a>
+      <a href="/proposal">Предложение</a>
+      <a href="/commercial-offer">Коммерческий офер</a>
+      <span></span>
+      <span></span>
+      <span></span>
+    </nav>
+    <a class="btn-header" href="https://wa.me/+79528885656?text=I need a Landing Page!">WhatsApp</a>
+  <!-- </header> -->
     <h1>Коммер<wbr>ческое пред<wbr>ложение</h1>
     <p>Выберите услуги и сформируйте счёт</p>
     <div>Курс доллара: <span id="usd-rate">загрузка...</span></div>
