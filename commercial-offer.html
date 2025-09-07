@@ -76,15 +76,13 @@ border-collapse: collapse;
       /* All your print styles go here */
       header,
       footer,
-      nav {
+      nav, .header, .logo, .btn {
         display: none !important;
       }
-      body > section:nth-child(4) > a{
+      #noPrint{
         display: none;
       }
-      body > section:nth-child(3){
-        display:none;
-      }
+     
       th, td {
         padding: 0.1rem;
         border: 0px solid #ddd;
@@ -258,7 +256,7 @@ border-collapse: collapse;
     <img src="QRcode.webp" alt="оплатить Landing Page по макету из фигмы">
   </picture>
   </section>
-  <section>
+  <section id="noPrint">
     <h2>Наши услуги</h2>
     <div id="servicesList"></div>
   </section>
