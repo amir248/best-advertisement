@@ -234,11 +234,7 @@ h2 {
     width:70px;
     height:3px;
   }
-  /* .nav > span:hover{
-    background-color:var(--green);
-  } */
-  /* body > main > header > nav > span:nth-child(6) */
-  .nav > span:nth-child(6){
+  .nav > span:nth-child(8){
     width:54px;
     margin:7px;
   }
