@@ -53,9 +53,12 @@
     </main>
 
     <footer>
-        <p>&copy; 2025 Амир Джан бротан. Все права защищены.</p>
+        <p>&copy; <span id="date"></span> Амир Джан бротан. Все права защищены.</p>
         <p><a href="https://debian-nginx-nodejs.qucu.ru/">На главную</a></p>
     </footer>
 </body>
+<script>
+    document.getElementById("date").innerHTML=new Date().getFullYear;
+</script>
 </html>
 
