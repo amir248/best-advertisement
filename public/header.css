@@ -59,7 +59,7 @@
   .nav > span{
     display:block;
     background-color: var(--yellow);
-    width:70px;
+    /* width:70px; */
     height:3px;
   }
   .middle{
