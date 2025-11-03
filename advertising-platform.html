@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Advertising Platform — проект</title>
   <meta name="description" content="Qucu Advertising Platform — собственная инфраструктура на Debian + NGINX + Node.js для размещения, управления и оптимизации рекламных кампаний." />
+  <link rel="stylesheet" href="public/header.css">
   <style>
     /* :root{
       --bg:#ffffff; --fg:#111827; --muted:#6b7280; --accent:#0f172a;
@@ -24,6 +25,11 @@
     footer{margin-top:26px;color:var(--muted);font-size:13px;text-align:center}
     .two-col{display:grid;grid-template-columns:1fr 1fr;gap:18px}
     @media (max-width:720px){.two-col{grid-template-columns:1fr}} */
+
+    
+    .nav > span{
+        background-color: yellow;
+    }
     :root {
       --bg: #0f172a;
       --fg: #e2e8f0;
@@ -132,6 +138,30 @@
   <link rel="icon" type="image/x-icon" href="public/img/ico.svg">
 </head>
 <body>
+    <div class="header">
+      <div class="logo">Web Work<wbr>shop</div>
+      <nav class="nav">
+        <a href="/about">О нас</a>
+        <a href="/#services">Услуги</a>
+        <a href="/#pricing">Цены</a>
+        <a href="/#contacts">Контакты</a>
+        <a href="/proposal">Предложение</a>
+        <a href="/commercial-offer">Коммерческий&nbsp;офер</a>
+        <span></span>
+        <span class="middle"></span>
+        <span></span>
+      </nav>
+    <a class="btn-header" href="https://wa.me/+79528885656?text=I need a Landing Page!">WhatsApp</a>
+    </div>
+  <header> 
+    <!-- </header> -->
+    
+     <!-- <nav class="nav">
+      <span></span>
+      <span></span>
+      <span></span>
+    </nav> -->
+  </header>
   <div class="container" role="main">
     <header>
       <h1>Advertising Platform</h1>
@@ -228,8 +258,10 @@
     </section>
 
     <footer>
-      <p class="small">footer</p>
+      <!-- <p class="small">footer</p> -->
+        <p>&copy; <span id="date"></span> Debian NGINX Node.js Web Workshop Studio — Разработка сайтов и Landing Page</p>
     </footer>
   </div>
 </body>
+<script src="public/script.js"></script>
 </html>
