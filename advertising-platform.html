@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Advertising Platform — проект</title>
+  <meta name="description" content="Qucu Advertising Platform — собственная инфраструктура на Debian + NGINX + Node.js для размещения, управления и оптимизации рекламных кампаний." />
+  <style>
+    :root{
+      --bg:#ffffff; --fg:#111827; --muted:#6b7280; --accent:#0f172a;
+      --card:#f8fafc; --border:#e6eef6;
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+    body{margin:0;background:var(--bg);color:var(--fg);line-height:1.55}
+    .container{max-width:960px;margin:36px auto;padding:28px;border-radius:12px;background:linear-gradient(180deg, #fff, #fbfdff);box-shadow:0 6px 22px rgba(15,23,42,0.06);border:1px solid var(--border)}
+    header h1{margin:0;font-size:28px}
+    header p{color:var(--muted);margin:8px 0 20px}
+    section{margin:22px 0}
+    h2{font-size:18px;margin:0 0 8px}
+    ul{margin:8px 0 0 20px}
+    .small{color:var(--muted);font-size:14px}
+    .cta{display:inline-block;margin-top:12px;padding:10px 14px;border-radius:10px;background:#0b84ff;color:white;text-decoration:none}
+    pre{background:#0f172a;color:#fff;padding:12px;border-radius:8px;overflow:auto;font-size:13px}
+    footer{margin-top:26px;color:var(--muted);font-size:13px;text-align:center}
+    .two-col{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+    @media (max-width:720px){.two-col{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <div class="container" role="main">
+    <header>
+      <h1>Advertising Platform</h1>
+      <p class="small">Независимая рекламная платформа на базе Debian + NGINX + Node.js — <a href="https://debian-nginx-nodejs.qucu.ru/" target="_blank" rel="noopener">debian-nginx-nodejs.qucu.ru</a></p>
+    </header>
+
+    <section>
+      <h2>Миссия</h2>
+      <p>Предоставить бизнесу надёжную, независимую инфраструктуру и эффективные решения для размещения, управления и оптимизации рекламных кампаний через собственный сервер.</p>
+    </section>
+
+    <section>
+      <h2>Суть проекта</h2>
+      <p>Мы создаём веб-платформу/сеть сайтов, размещённых на выделенном сервере, которые:</p>
+      <ul>
+        <li>продвигают товары, услуги и бренды;</li>
+        <li>показывают рекламные материалы (баннеры, партнерские кампании, собственную рекламу);</li>
+        <li>собирают и анализируют статистику посещений и конверсий;</li>
+        <li>дают полный контроль над инфраструктурой, безопасностью и производительностью.</li>
+      </ul>
+    </section>
+
+    <section class="two-col">
+      <div>
+        <h2>Почему нужен собственный сервер</h2>
+        <ul>
+          <li>Полный контроль над конфигурацией (NGINX, Node.js, firewall, backup).</li>
+          <li>Независимость от ограничений сторонних хостеров.</li>
+          <li>Гибкая интеграция трекинга, аналитики и CRM.</li>
+          <li>Повышенная безопасность и предсказуемая производительность.</li>
+        </ul>
+      </div>
+      <div>
+        <h2>Целевая аудитория</h2>
+        <ul>
+          <li>Малый и средний бизнес, нуждающийся в самостоятельном рекламном веб-ресурсе.</li>
+          <li>Маркетинговые агентства и фрилансеры, запускающие кампании для клиентов.</li>
+          <li>Проекты, требующие кастомных интеграций и аналитики.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h2>Продукт и услуги</h2>
+      <ul>
+        <li><strong>Создание лендингов:</strong> адаптивные посадочные страницы на Node.js, оптимизированные под конверсии.</li>
+        <li><strong>Размещение:</strong> выделенный сервер на Debian + NGINX — деплой, безопасность, резервирование.</li>
+        <li><strong>SEO и аналитика:</strong> настройка скорости, структура страниц, интеграция трекинга и отчетов.</li>
+        <li><strong>Интеграции:</strong> CRM, платежи, рекламные сети, API для партнёров.</li>
+        <li><strong>Сопровождение:</strong> мониторинг, обновления, техподдержка.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Конкурентные преимущества</h2>
+      <ul>
+        <li>Полный контроль над инфраструктурой и данными.</li>
+        <li>Высокая скорость и оптимизация под SEO за счёт NGINX + Node.js.</li>
+        <li>Гибкость кастомизации под потребности клиента.</li>
+        <li>Независимость от ограничений SaaS-платформ и маркетплейсов.</li>
+      </ul>
+    </section>
+
+    <section class="two-col">
+      <div>
+        <h2>Монетизация</h2>
+        <ul>
+          <li>Подписка (тарифы: Старт / Бизнес / Премиум).</li>
+          <li>Доп. услуги: дизайн, интеграции, аналитика.</li>
+          <li>Партнёрские программы и продвижение клиентов.</li>
+        </ul>
+      </div>
+      <div>
+        <h2>План запуска (кратко)</h2>
+        <ol>
+          <li>Подготовка инфраструктуры: сервер, безопасность, мониторинг.</li>
+          <li>Разработка шаблонов лендингов и панели управления.</li>
+          <li>Запуск сайта проекта и публикация прайса/кейсов.</li>
+          <li>Маркетинг: SEO, контент, таргет, B2B-продажи.</li>
+          <li>Привлечение первых клиентов и масштабирование.</li>
+        </ol>
+      </div>
+    </section>
+
+    <section>
+      <h2>Презентация / Финмодель</h2>
+      <p>Готовы подготовить PDF-презентацию (проблема — решение — рынок — тарифы — прогноз доходов) и простую финансовую модель на год (затраты, доходы, точка безубыточности).</p>
+      <a class="cta" href="https://debian-nginx-nodejs.qucu.ru/" target="_blank" rel="noopener">Посетить демо / сайт проекта</a>
+    </section>
+
+    <section>
+      <h2>Контактная информация</h2>
+      <p class="small">Если нужно, могу подготовить: готовый лендинг на основе шаблона, тексты для страниц, тарифы и слайды для инвестора.</p>
+    </section>
+
+    <footer>
+      <p class="small">Документ сгенерирован автоматически. При желании могу: экспортировать в PDF, подготовить слайды или адаптировать текст под посадочную страницу.</p>
+    </footer>
+  </div>
+</body>
+</html>
