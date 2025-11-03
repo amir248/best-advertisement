@@ -6,6 +6,7 @@
   <title>Advertising Platform — проект</title>
   <meta name="description" content="Qucu Advertising Platform — собственная инфраструктура на Debian + NGINX + Node.js для размещения, управления и оптимизации рекламных кампаний." />
   <link rel="stylesheet" href="public/header.css">
+  
   <style>
     /* :root{
       --bg:#ffffff; --fg:#111827; --muted:#6b7280; --accent:#0f172a;
@@ -139,6 +140,121 @@
     }
   </style>
   <link rel="icon" type="image/x-icon" href="public/img/ico.svg">
+  <!-- == SEO + Social + JSON-LD для /advertising-platform == -->
+<link rel="canonical" href="https://debian-nginx-nodejs.qucu.ru/advertising-platform" />
+<meta name="robots" content="index, follow" />
+<meta name="theme-color" content="#0f172a" />
+
+<title>Advertising Platform — выделенный сервер Debian • NGINX • Node.js</title>
+<meta name="description" content="Qucu Advertising Platform — выделенный сервер (Debian + NGINX + Node.js) для размещения лендингов, аналитики и управления рекламой. Безопасность, высокая скорость, SEO." />
+<meta name="keywords" content="рекламная платформа, выделенный сервер, Debian, NGINX, Node.js, лендинг, SEO, аналитика" />
+
+<!-- Open Graph -->
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Advertising Platform — выделенный сервер Debian • NGINX • Node.js" />
+<meta property="og:description" content="Qucu Advertising Platform — выделенный сервер (Debian + NGINX + Node.js) для размещения лендингов, аналитики и управления рекламой. Безопасность, высокая скорость, SEO." />
+<meta property="og:url" content="https://debian-nginx-nodejs.qucu.ru/advertising-platform" />
+<meta property="og:site_name" content="debian-nginx-nodejs.qucu.ru" />
+<meta property="og:image" content="https://debian-nginx-nodejs.qucu.ru/og-image-adplatform.png" />
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Advertising Platform — выделенный сервер Debian • NGINX • Node.js" />
+<meta name="twitter:description" content="Qucu Advertising Platform — выделенный сервер (Debian + NGINX + Node.js) для размещения лендингов и управления рекламой." />
+<meta name="twitter:image" content="https://debian-nginx-nodejs.qucu.ru/og-image-adplatform.png" />
+
+<!-- Prefered Languages (если нужно) -->
+<link rel="alternate" href="https://debian-nginx-nodejs.qucu.ru/advertising-platform" hreflang="ru" />
+
+<!-- Schema.org JSON-LD -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://debian-nginx-nodejs.qucu.ru/#organization",
+      "name": "Qucu / Debian-NGINX-NodeJS",
+      "url": "https://debian-nginx-nodejs.qucu.ru/",
+      "logo": "https://debian-nginx-nodejs.qucu.ru/logo.png",
+      "sameAs": [
+        "https://github.com/amir248",
+        "https://github.com/Onnessa1"
+      ],
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "telephone": "+7-952-888-5656",
+          "contactType": "customer support",
+          "areaServed": "RU",
+          "availableLanguage": "Russian"
+        }
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://debian-nginx-nodejs.qucu.ru/#website",
+      "url": "https://debian-nginx-nodejs.qucu.ru/",
+      "name": "debian-nginx-nodejs.qucu.ru",
+      "description": "Инфраструктура Debian + NGINX + Node.js — демо и примеры развёртывания.",
+      "publisher": { "@id": "https://debian-nginx-nodejs.qucu.ru/#organization" },
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://debian-nginx-nodejs.qucu.ru/search?q={search_term}",
+        "query-input": "required name=search_term"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://debian-nginx-nodejs.qucu.ru/advertising-platform#webpage",
+      "url": "https://debian-nginx-nodejs.qucu.ru/advertising-platform",
+      "name": "Advertising Platform — выделенный сервер Debian + NGINX + Node.js",
+      "isPartOf": { "@id": "https://debian-nginx-nodejs.qucu.ru/#website" },
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "https://debian-nginx-nodejs.qucu.ru/og-image-adplatform.png",
+        "width": 1200,
+        "height": 630
+      },
+      "description": "Qucu Advertising Platform — выделенный сервер для размещения лендингов, аналитики и управления рекламой. Высокая скорость, безопасность и удобная интеграция.",
+      "breadcrumb": { "@id": "https://debian-nginx-nodejs.qucu.ru/advertising-platform#breadcrumb" },
+      "inLanguage": "ru-RU"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://debian-nginx-nodejs.qucu.ru/advertising-platform#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Главная",
+          "item": "https://debian-nginx-nodejs.qucu.ru/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Advertising Platform",
+          "item": "https://debian-nginx-nodejs.qucu.ru/advertising-platform"
+        }
+      ]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://debian-nginx-nodejs.qucu.ru/advertising-platform#service",
+      "name": "Размещение рекламных лендингов на выделенном сервере",
+      "description": "Разработка и размещение лендингов, SEO, аналитика и сопровождение на выделенном сервере (Debian + NGINX + Node.js).",
+      "provider": { "@id": "https://debian-nginx-nodejs.qucu.ru/#organization" },
+      "serviceType": ["Hosting", "Web development", "SEO"],
+      "areaServed": "RU",
+      "audience": {
+        "@type": "Audience",
+        "audienceType": "Small and Medium Business"
+      }
+    }
+  ]
+}
+</script>
+
 </head>
 <body>
     <div class="header">
