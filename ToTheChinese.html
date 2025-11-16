@@ -49,21 +49,23 @@
   </script>
   <style>
     /* 简洁且自包含的样式，方便快速部署与调整 */
-    :root{
-      --bg:#f7f9fb;
-      --card:#ffffff;
-      --accent:#0b66ff;
-      --muted:#666;
-      --radius:12px;
-      --maxw:980px;
-      --gutter:20px;
-      font-family: "Helvetica Neue", Arial, sans-serif;
-    }
+    :root {
+        /* Цвета из commercial-offer */
+        --bg: #000000;
+        --card: #888888;
+        --accent: #50ff0b;
+        --muted: #ffffff;
+        --radius: 12px;
+
+        /* Доп. цвета, если были на commercial-offer */
+        --shadow: rgba(8, 30, 60, 0.08);
+        --button-shadow: rgba(255, 218, 11, 0.18);
+        }
     html,body{height:100%;}
     body{
       margin:0;
-      background:linear-gradient(180deg,var(--bg),#eef4ff);
-      color:#111;
+      background: var(--bg);
+        color: var(--muted);
       -webkit-font-smoothing:antialiased;
       -moz-osx-font-smoothing:grayscale;
       line-height:1.5;
@@ -71,15 +73,16 @@
       box-sizing:border-box;
       display:flex;
       justify-content:center;
+      text-shadow: 1px 1px black;
     }
-    .container{
+    /* .container{
       width:100%;
       max-width:var(--maxw);
       background:var(--card);
       border-radius:16px;
-      box-shadow:0 10px 30px rgba(8,30,60,0.08);
+      box-shadow:0 10px 30px rgba(46, 60, 8, 0.08);
       padding:28px;
-    }
+    } */
     header{
       display:flex;
       gap:16px;
@@ -111,20 +114,35 @@
     @media(min-width:920px){
       .grid{grid-template-columns: 1fr 320px;}
     }
-    .card{background:linear-gradient(180deg,white,#fbfdff);border-radius:12px;padding:18px;box-shadow:0 6px 18px rgba(12,30,60,0.04);}
-    .section-title{font-size:16px;margin:0 0 10px;font-weight:700;color:#0b2948;}
+    .card {
+        background: var(--card);
+        border-radius: var(--radius);
+        box-shadow: 0 6px 18px var(--shadow);
+    }
+    /* .section-title{font-size:16px;margin:0 0 10px;font-weight:700;color:#0b2948;} */
     ul{padding-left:18px;margin:6px 0 0;color:var(--muted);}
     a.button{
       display:inline-block;
       background:var(--accent);
-      color:white;
+      box-shadow: 0 6px 16px var(--button-shadow);
+  border-radius: 10px; /* или var(--radius) или другое */
+  color: white;
       text-decoration:none;
       padding:10px 14px;
-      border-radius:10px;
+  
       font-weight:600;
-      box-shadow:0 6px 16px rgba(11,102,255,0.18);
+      /* box-shadow:0 6px 16px rgba(11,102,255,0.18); */
     }
-    .small{font-size:13px;color:var(--muted);}
+    h1, h2, h3 {
+        color: var(--accent);
+        }
+
+        /* Меньшие тексты */
+        .small {
+        color: var(--muted);
+        }
+
+    /* .small{font-size:13px;color:var(--muted);} */
     footer{margin-top:18px;font-size:13px;color:var(--muted);display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;}
     .price-list{list-style:none;padding:0;margin:0;}
     .price-item{display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px dashed #eee;}
