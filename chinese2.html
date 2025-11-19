@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>专业数字服务 | 网站建设 · 小程序 · 微信营销 · 百度SEO</title>
+
+  <!-- ===== Baidu / China SEO ===== -->
+  <meta name="description" content="为中国企业提供网站建设、小程序开发、微信营销、百度SEO与品牌设计的国际团队，快速交付，贴合本地用户习惯。" />
+  <meta name="keywords" content="网站建设, 小程序, 微信营销, 百度SEO, 品牌设计, 电商开发, 中国市场" />
+  <meta name="baidu-site-verification" content="YOUR_BAIDU_CODE" />
+  <meta name="sogou_site_verification" content="YOUR_SOGOU_CODE" />
+  <meta name="shenma-site-verification" content="YOUR_SHENMA_CODE" />
+  <meta name="360-site-verification" content="YOUR_360_CODE" />
+  <meta name="robots" content="index,follow" />
+  <meta name="applicable-device" content="pc,mobile" />
+  <meta http-equiv="Cache-Control" content="no-transform" />
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <link rel="canonical" href="https://debian-nginx-nodejs.qucu.ru/chinese" />
+  <link rel="icon" href="/favicon.ico" />
+
+  <!-- Open Graph (optional, useful for social shares) -->
+  <meta property="og:title" content="专业数字服务 — 网站建设 / 小程序 / 微信营销" />
+  <meta property="og:description" content="面向中国市场的完整数字化解决方案：快速上线、稳定运维、精细化运营。" />
+  <meta property="og:locale" content="zh_CN" />
+  <meta property="og:type" content="website" />
+
+  <!-- JSON-LD (Organization + Baidu cambrian snippet) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://ziyuan.baidu.com/contexts/cambrian.jsonld",
+    "@type": "WebSite",
+    "url": "https://debian-nginx-nodejs.qucu.ru/chinese",
+    "name": "专业数字服务平台",
+    "description": "为中国企业提供网站、小程序、微信与SEO解决方案。",
+    "inLanguage": "zh-CN"
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "专业数字服务平台",
+    "url": "https://debian-nginx-nodejs.qucu.ru/",
+    "logo": "https://debian-nginx-nodejs.qucu.ru/logo.png",
+    "contactPoint": [{
+      "@type": "ContactPoint",
+      "telephone": "+86-10-1234-5678",
+      "contactType": "customer service",
+      "areaServed": "CN",
+      "availableLanguage": "zh-CN"
+    }]
+  }
+  </script>
+
+  <!-- ===== Minimal, modern responsive CSS (mobile first) ===== -->
+  <style>
+    :root{
+      --red:#E60012;
+      --gold:#FFD700;
+      --bg:#fafafa;
+      --card:#ffffff;
+      --muted:#666;
+      --accent:#ff4b4b;
+      --container:1100px;
+      --radius:12px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family: "PingFang SC", "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif;
+      background:var(--bg);
+      color:#222;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.55;
+    }
+
+    a{color:inherit;text-decoration:none}
+
+    header{
+      background:linear-gradient(135deg,var(--red),#ff6b6b);
+      color:white;
+      padding:36px 16px;
+    }
+    .wrap{width:94%;max-width:var(--container);margin:0 auto}
+
+    .hero{
+      display:flex;
+      gap:20px;
+      align-items:center;
+      justify-content:space-between;
+      padding:18px 0;
+    }
+    .brand{
+      display:flex;
+      gap:14px;
+      align-items:center;
+    }
+    .brand img{height:56px;width:56px;border-radius:10px;background:#fff;padding:6px}
+    .brand h1{font-size:20px;margin:0}
+    .tagline{opacity:.95;font-size:14px;color:#fff;margin-top:4px}
+
+    .hero-cta{
+      text-align:right;
+    }
+    .btn{
+      display:inline-block;
+      background:var(--gold);
+      color:#111;
+      padding:12px 18px;
+      border-radius:999px;
+      font-weight:700;
+      box-shadow:0 6px 18px rgba(0,0,0,0.12);
+      margin-left:10px;
+    }
+    .btn-ghost{
+      background:transparent;border:1px solid rgba(255,255,255,0.2);color:#fff;padding:10px 14px;border-radius:999px;margin-left:8px
+    }
+
+    /* Main banner */
+    .banner{
+      display:flex;
+      gap:24px;
+      align-items:center;
+      padding:28px 0 48px 0;
+      flex-wrap:wrap;
+    }
+    .banner-left{flex:1;min-width:260px}
+    .banner-left h2{font-size:32px;margin:0 0 10px 0}
+    .banner-left p{color:var(--muted);margin:0 0 18px 0}
+    .cta-row{display:flex;gap:12px;flex-wrap:wrap}
+    .wechat-qr{display:flex;gap:12px;align-items:center;background:var(--card);border-radius:10px;padding:10px 12px;box-shadow:0 6px 18px rgba(0,0,0,0.06)}
+
+    .banner-right{width:220px;min-width:180px;text-align:center}
+    .banner-right img{width:180px;height:180px;border-radius:12px;object-fit:cover;border:4px solid #fff}
+
+    /* Services grid */
+    section{padding:24px 0}
+    h3.section-title{font-size:22px;margin:0 0 10px 0;border-left:5px solid var(--red);padding-left:10px}
+    .cards{
+      display:grid;
+      gap:14px;
+      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+      margin-top:14px;
+    }
+    .card{
+      background:var(--card);
+      padding:18px;border-radius:var(--radius);
+      box-shadow:0 6px 18px rgba(12,12,12,0.04);
+      border:1px solid rgba(0,0,0,0.03)
+    }
+    .card h4{margin:0 0 6px 0}
+    .card p{margin:0;color:var(--muted);font-size:14px}
+
+    /* Trust / logos */
+    .trust{
+      display:flex;gap:20px;flex-wrap:wrap;align-items:center;justify-content:center;padding:14px 0;
+    }
+    .trust img{height:36px;opacity:.9}
+
+    /* Process */
+    .steps{display:flex;gap:12px;flex-wrap:wrap;margin-top:12px}
+    .step{flex:1;min-width:170px;background:linear-gradient(180deg,#fff,#fff);padding:16px;border-radius:10px;border:1px solid rgba(0,0,0,0.04);text-align:center}
+    .step .num{background:var(--red);color:#fff;border-radius:999px;width:36px;height:36px;line-height:36px;margin:0 auto 8px auto;font-weight:700}
+
+    /* Cases / Testimonials */
+    .cases{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px;margin-top:12px}
+    .case{background:linear-gradient(180deg,#fff,#fff);padding:12px;border-radius:10px;border:1px solid rgba(0,0,0,0.04)}
+    .case p{margin:6px 0;color:var(--muted);font-size:14px}
+
+    footer{padding:26px 0;background:#111;color:#ddd;margin-top:24px}
+    footer .small{font-size:13px;color:#aaa}
+    .contact-row{display:flex;gap:14px;flex-wrap:wrap;align-items:center;justify-content:space-between}
+
+    /* Responsive */
+    @media (max-width:720px){
+      .hero{flex-direction:column;align-items:flex-start}
+      .banner-right{order:2;width:150px}
+      .banner-left h2{font-size:24px}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap hero" role="banner">
+      <div class="brand">
+        <img src="/logo.png" alt="公司logo">
+        <div>
+          <h1>专业数字服务平台</h1>
+          <div class="tagline">网站 / 小程序 / 微信营销 · 精准触达中国用户</div>
+        </div>
+      </div>
+
+      <div class="hero-cta" aria-hidden="false">
+        <a class="btn" href="#contact">立即咨询</a>
+        <!-- <a class="btn-ghost" href="/">站点地图</a> -->
+      </div>
+    </div>
+
+    <div class="wrap banner" aria-label="主要宣传">
+      <div class="banner-left">
+        <h2>快速上线 · 安全稳定 · 深耕中国市场</h2>
+        <p>我们结合国际化技术和本地化运营经验，帮助企业在中国市场快速建立品牌与销售渠道 — 包括网站、小程序、微信生态和百度SEO优化。</p>
+
+        <div class="cta-row">
+          <a class="btn" href="#contact">微信扫码咨询</a>
+          <a class="btn-ghost" href="#services">查看服务</a>
+        </div>
+
+        <div style="margin-top:12px; display:flex; gap:10px; align-items:center;">
+          <div class="wechat-qr" role="img" aria-label="WeChat QR код">
+            <img src="/your-wechat-qr.png" alt="WeChat QR" style="width:84px;height:84px;border-radius:8px;object-fit:cover">
+            <div style="font-size:13px;color:#333">
+              <div style="font-weight:700">微信扫码咨询</div>
+              <div style="color:var(--muted);margin-top:6px">或搜索 WhatsApp: <strong><a href="https://wa.me/+79528885656">WhatsApp</a></strong></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="banner-right" aria-hidden="false">
+        <img src="/hero-image.jpg" alt="服务示意图 - 网站与营销">
+        <div style="margin-top:10px;color:#fff;background:rgba(0,0,0,0.06);padding:6px;border-radius:8px;font-size:13px">专业 · 定制 · 快速交付</div>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap" role="main" id="maincontent" tabindex="-1">
+    <!-- Advantages -->
+    <section>
+      <h3 class="section-title">为什么选择我们？</h3>
+      <div class="cards" style="margin-top:12px">
+        <div class="card">
+          <h4>国际化技术团队</h4>
+          <p>拥有前端、后端、DevOps 与产品经理，支持中英双语沟通。</p>
+        </div>
+        <div class="card">
+          <h4>深耕中国市场</h4>
+          <p>熟悉微信生态、百度搜索与本地用户偏好，提供落地策略。</p>
+        </div>
+        <div class="card">
+          <h4>快速上线 & 迭代</h4>
+          <p>敏捷交付流程与持续运维，保障业务稳定运行。</p>
+        </div>
+        <div class="card">
+          <h4>安全与合规</h4>
+          <p>服务器加固、HTTPS 与数据备份；支持国内备案（若需要）。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services">
+      <h3 class="section-title">我们的服务</h3>
+      <div class="cards">
+        <div class="card">
+          <h4>网站建设</h4>
+          <p>企业官网、品牌展示、电商落地页，SEO友好结构。</p>
+        </div>
+        <div class="card">
+          <h4>小程序 & 移动端</h4>
+          <p>微信小程序、H5活动页、移动端优化与性能调优。</p>
+        </div>
+        <div class="card">
+          <h4>微信营销</h4>
+          <p>公众号运营、社群策略、内容策划与传播方案。</p>
+        </div>
+        <div class="card">
+          <h4>百度SEO & SEM</h4>
+          <p>关键词研究、本地化内容、站内结构优化与竞价投放支持。</p>
+        </div>
+        <div class="card">
+          <h4>品牌设计</h4>
+          <p>LOGO、VI、UI/UX 与落地视觉素材制作。</p>
+        </div>
+        <div class="card">
+          <h4>运维 & 安全</h4>
+          <p>服务器部署、监控告警、定期安全检测与备份。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Trust logos -->
+    <!-- <section aria-label="合作伙伴与信任">
+      <h3 class="section-title">合作伙伴 / 客户</h3>
+      <div class="block trust" style="margin-top:12px"> -->
+        <!-- Замените на реальные логотипы клиентов / партнёров -->
+        <!-- <img src="/logo-client1.png" alt="client 1">
+        <img src="/logo-client2.png" alt="client 2">
+        <img src="/logo-client3.png" alt="client 3">
+        <img src="/logo-client4.png" alt="client 4">
+      </div>
+    </section> -->
+
+    <!-- Process -->
+    <section>
+      <h3 class="section-title">合作流程</h3>
+      <div class="steps" style="margin-top:12px">
+        <div class="step">
+          <div class="num">1</div>
+          <div style="font-weight:700">沟通需求</div>
+          <div style="color:var(--muted);margin-top:6px">首次免费咨询，明确目标与预算</div>
+        </div>
+        <div class="step">
+          <div class="num">2</div>
+          <div style="font-weight:700">方案设计</div>
+          <div style="color:var(--muted);margin-top:6px">提交阶段性里程碑与报价</div>
+        </div>
+        <div class="step">
+          <div class="num">3</div>
+          <div style="font-weight:700">执行交付</div>
+          <div style="color:var(--muted);margin-top:6px">开发、测试、上线</div>
+        </div>
+        <div class="step">
+          <div class="num">4</div>
+          <div style="font-weight:700">运营优化</div>
+          <div style="color:var(--muted);margin-top:6px">数据跟进与持续优化</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Cases -->
+    <section>
+      <h3 class="section-title">成功案例</h3>
+      <div class="cases">
+        <div class="case">
+          <h4>跨境电商品牌官网</h4>
+          <p>通过定制化电商落地页与百度优化，单月转化率提升 38%。</p>
+        </div>
+        <div class="case">
+          <h4>本地生活服务小程序</h4>
+          <p>构建高并发下稳定的小程序框架，提升用户留存率。</p>
+        </div>
+        <div class="case">
+          <h4>企业品牌改造</h4>
+          <p>重塑视觉与内容策略，帮助客户进入细分市场。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+      <h3 class="section-title">联系我们</h3>
+      <div class="card" style="display:flex;gap:18px;align-items:center;flex-wrap:wrap;margin-top:12px">
+        <div style="flex:1;min-width:220px">
+          <p style="margin:0 0 6px 0;font-weight:700">📞 电话</p>
+          <p style="margin:0 0 12px 0;color:var(--muted)"><a href="tel:+79528885656">89528885656</a> (only Russian language)</p>
+
+          <p style="margin:0 0 6px 0;font-weight:700">📧 邮箱</p>
+          <p style="margin:0 0 12px 0;color:var(--muted)"><a href="mailto:lucky@qucu.ru">lucky@qucu.ru</a></p>
+
+          <p style="margin:0 0 6px 0;font-weight:700">📍 服务区域</p>
+          <p style="margin:0;color:var(--muted)">中国大陆 / 国际客户</p>
+        </div>
+
+        <!-- <div style="min-width:180px">
+          <div style="font-weight:700;margin-bottom:8px">微信扫码快速联系</div>
+          <img src="/your-wechat-qr.png" alt="WeChat QR" style="width:180px;height:180px;border-radius:12px;object-fit:cover;border:6px solid #fff;box-shadow:0 6px 18px rgba(0,0,0,0.06)">
+        </div> -->
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap" style="display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap">
+      <div style="font-size:14px">© <strong>专业数字服务平台</strong> · <span id="data"></span></div>
+      <div style="font-size:13px;color:#aaa">备案/ICP（如需）：请联系咨询 · <a href="https://debian-nginx-nodejs.qucu.ru/" style="color:#ccc">Main</a></div>
+    </div>
+  </footer>
+
+  <!-- Optional: small inline script to improve UX -->
+  <script>
+    // Simple focus for accessibility when navigating to #maincontent
+    (function(){ 
+      var hash = location.hash;
+      if(hash === "#maincontent" || hash === "#contact") {
+        var el = document.getElementById(hash.replace('#',''));
+        if(el) el.setAttribute('tabindex','-1'), el.focus();
+      }
+    })();
+    const d=new Date();
+    const year=d.getFullYear();
+    document.querySelector("#data").innerHTML=`${year}`;
+  </script>
+</body>
+</html>
