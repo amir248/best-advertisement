@@ -107,6 +107,7 @@
             border-radius: 10px;
         }
     </style>
+    <link rel="icon" type="image/x-icon" href="public/img/ico.svg">
 </head>
 <body>
 
@@ -177,8 +178,13 @@
 </div>
 
 <footer>
-    <p>© 2025 专业数字服务平台 | 适用于中国市场的解决方案</p>
+    <p>© <span id="data"></span> 专业数字服务平台 | 适用于中国市场的解决方案</p>
 </footer>
 
 </body>
+<script>
+    const d=new Date();
+    const year=d.getFullYear();
+    document.querySelector("#data").innerHTML=`${year}`;
+</script>
 </html>
