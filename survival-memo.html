@@ -16,6 +16,7 @@
             padding: 0;
             color: #222;
             line-height: 1.6;
+            background-color: #111;
         }
         header {
             background: #222;
@@ -23,32 +24,43 @@
             padding: 20px;
             text-align: center;
         }
+        h1{
+            color:yellow;
+        }
         section {
             max-width: 900px;
-            background: #fff;
+            background: #222;
             margin: 20px auto;
             padding: 25px;
             border-radius: 10px;
+            color:white;
+            text-shadow: black 1px 1px;
         }
-        h2 { color: #333; margin-top: 30px; }
+        h2 { color: #77cc07; margin-top: 30px; }
         ul { margin-left: 20px; }
         .warning {
             background: #ffe1e1;
             border-left: 5px solid #cc0000;
             padding: 15px;
             margin: 20px 0;
+            color:rgb(177, 14, 14);
         }
         .ok {
             background: #e1ffe6;
             border-left: 5px solid #009933;
             padding: 15px;
             margin: 20px 0;
+            color:#009933
         }
         footer {
             text-align: center;
             padding: 20px;
             color: #555;
             font-size: 14px;
+        }
+        picture > img{
+            width:100%;
+            max-width: 830px;
         }
     </style>
     <script type="application/ld+json">
@@ -108,9 +120,22 @@
   }
 }
 </script>
-
+<link rel="canonical" href="https://debian-nginx-nodejs.qucu.ru/survival-memo" />
+  <link rel="icon" type="image/x-icon" href="public/img/ico.svg">
 </head>
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=104020719', 'ym');
 
+    ym(104020719, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", accurateTrackBounce:true, trackLinks:true});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/104020719" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
 <body>
 
 <header>
@@ -189,7 +214,9 @@
         ✔ Убедитесь, что телефоны заряжены.<br>
         ✔ Держитесь подальше от мест массовых скоплений.
     </div>
-
+    <picture>
+        <img src="/public/img/collapse98andToday.png" alt="коллапс 98 года и сегодня">
+    </picture>
 </section>
 
 <footer>
